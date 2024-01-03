@@ -1,5 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 //Al principio del archivo las importaciones
+@import "primeicons/primeicons.css";
+@import "primeng/resources/themes/md-light-indigo/theme.css";
+@import "primeng/resources/primeng.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    print-color-adjust: exact;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.display-to-print {
+    display: none;
+
+    @media print {
+        display: block;
+    }
+}
+
+@media print {
+    .remove-to-print, .mdc-tab-indicator {
+        display: none !important;
+    }
+}
