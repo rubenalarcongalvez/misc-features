@@ -29,3 +29,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
         display: none !important;
     }
 }
+
+.mdc-tab-indicator__content--underline {
+    --mdc-tab-indicator-active-indicator-color: orangered;
+}
