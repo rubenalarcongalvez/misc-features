@@ -74,10 +74,9 @@ export class GlobalService {
       winner: EnumLibraries['Angular Material'],
       primeNG: {
         pros: [
-          'Easy to customize with ::ng-deep, and you can put all elements you want inside'
+          'Easy to customize with :host ::ng-deep, and you can put all elements you want inside'
         ],
         cons: [
-          'Difficult to customize. To change color, you ought to put ::ng-deep',
           'Icons are way less than Angular Material, which are from Google generally',
           'Apperance is not that good by default, you have to modify it to make it good looking'
         ]
@@ -91,6 +90,31 @@ export class GlobalService {
         ],
         cons: [
           'Some properties are hard to customize and you cannot use Tailwind in the main component of the button, it should be inside'
+        ]
+      }
+    },
+    {
+      feature: 'Sidebar',
+      winner: EnumLibraries.PrimeNG,
+      primeNG: {
+        pros: [
+          'Easy to customize with :host ::ng-deep, and you can put all elements you want inside',
+          'Very good looking with few configuration',
+          'Lots of configuration and place the sidebar, close button, etc.',
+          'You can stablish "visible" property with TS so you can share it with Inputs and service'
+        ],
+        cons: [
+          'Sometimes it is hard to know the classes needed to customize it'
+        ]
+      },
+      angularMaterial: {
+        pros: [
+          'Basic installation and well explained if focus in same component',
+        ],
+        cons: [
+          'You ought to put more things in the component and outside of it (which can be a problem)',
+          'You have to customize more to have a good looking apperance',
+          'Not that many configurations'
         ]
       }
     },

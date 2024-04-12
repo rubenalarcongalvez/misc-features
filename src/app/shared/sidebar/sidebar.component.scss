@@ -1,0 +1,11 @@
+li, mat-icon {
+    cursor: pointer;
+
+    &:hover {
+        color: rgb(37 99 235);
+    }
+}
+
+.active {
+    color: rgb(37 99 235);
+}

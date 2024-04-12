@@ -1,5 +1,5 @@
 .mat-test {
-    background-color: black;
+    background-color: #1d4ed8;
     border-radius: 2rem;
     /* This added just to be similar to PrimeNG, by default, Material is better */
     font-size: 14px;
@@ -7,16 +7,7 @@
     padding: 8px;
 }
 
-::ng-deep .p-button {
-    background-color: black;
-    padding: 8px;
-    font-size: 14px;
-    border: none;
+::ng-deep .p-sidebar-header {
     display: flex;
-    align-items: center;
-    gap: 8px;
-
-    &:focus {
-        box-shadow: none;
-    }
+    justify-content: right;
 }

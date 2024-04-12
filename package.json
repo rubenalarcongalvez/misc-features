@@ -1,6 +1,6 @@
 {
-  "name": "misc-features",
-  "version": "0.0.0",
+  "name": "primeng-vs-angular_material",
+  "version": "0.3",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

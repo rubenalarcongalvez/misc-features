@@ -30,6 +30,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     }
 }
 
-.mdc-tab-indicator__content--underline {
-    --mdc-tab-indicator-active-indicator-color: orangered;
+.p-button {
+    background-color: #1d4ed8;
+    padding: 8px;
+    font-size: 14px;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &:focus {
+        box-shadow: none;
+    }
 }

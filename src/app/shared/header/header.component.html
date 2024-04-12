@@ -1,11 +1,30 @@
-<header class="flex flex-nowrap bg-orange-600 text-white items-center justify-between p-2 rounded-[2rem] m-2">
-    <p-button class="primeNG-test" [rounded]="true">
-        <i class="pi pi-bars"></i>
-        <span>PrimeNG Menu</span>
-    </p-button>
-    <h3 class="font-normal cursor-pointer" routerLink="/">PrimeNG vs Angular Material</h3>
-    <button mat-button color="test">
-        <span>Angular Menu</span>
-        <mat-icon iconPositionEnd class="mat-18">menu</mat-icon>
-    </button>
-</header>
+<!-- Angular Material Sidenav (sidebar) -->
+<!-- They are always put in the same component as the declaration of the sidenav -->
+<!-- We must put the mat-sidenav-container among all the content if posible if we want to move the header in example -->
+<mat-sidenav-container class="!bg-white">
+    <!-- In Angular Material we HAVE to put fixedInViewport to fix it not to the component but to the viewport -->
+    <mat-sidenav #materialSidenav mode="side" position="end" [fixedInViewport]="true" class="!bg-white !text-black">
+        <app-sidebar></app-sidebar>
+    </mat-sidenav>
+
+    <!-- PrimeNG Sidebar: We only have to put this, and put the property visible with TS -->
+    <p-sidebar [(visible)]="primeNGSidebarVisible">
+        <ng-template pTemplate="closeicon">
+            <i class="pi pi-arrow-left text-blue-600"></i>
+        </ng-template>
+        <app-sidebar></app-sidebar>
+    </p-sidebar>
+
+    <header class="flex flex-nowrap bg-black text-white items-center justify-between p-2 rounded-[2rem] m-2">
+        <p-button class="primeNG-test" [rounded]="true" (click)="primeNGSidebarVisible = !primeNGSidebarVisible">
+            <i class="pi pi-bars"></i>
+            <span>PrimeNG Menu</span>
+        </p-button>
+        <h3 class="font-normal cursor-pointer" routerLink="/">PrimeNG vs Angular Material</h3>
+        <!-- We toggle sidenav of Angular Material -->
+        <button mat-button color="test" (click)="materialSidenav.toggle()">
+            <span>Angular Menu</span>
+            <mat-icon iconPositionEnd class="mat-18">menu</mat-icon>
+        </button>
+    </header>
+</mat-sidenav-container>
