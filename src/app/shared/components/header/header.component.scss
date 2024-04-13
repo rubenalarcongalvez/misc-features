@@ -5,9 +5,18 @@
     font-size: 14px;
     height: fit-content;
     padding: 8px;
+    border-end-end-radius: 99px;
+    border-start-end-radius: 99px;
 }
 
 ::ng-deep .p-sidebar-header {
     display: flex;
     justify-content: right;
+}
+
+:host ::ng-deep .p-button {
+    border-end-end-radius: 5px;
+    border-start-end-radius: 5px;
+    border-start-start-radius: 99px;
+    border-end-start-radius: 99px;
 }
