@@ -43,3 +43,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
         box-shadow: none;
     }
 }
+
+/* REALLY difficult to find out how to set this... */
+.mdc-tab-indicator__content--underline {
+    color: #1d4ed8 !important;
+    border-color: #1d4ed8 !important;
+}

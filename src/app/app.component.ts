@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './shared/header/header.component';
-import { FooterComponent } from './shared/footer/footer.component';
-import { MaterialModule } from './page/style/material/material.module';
-import { PrimeNgModule } from './page/style/prime-ng/prime-ng.module';
+import { MaterialModule } from './shared/style/material/material.module';
+import { PrimeNgModule } from './shared/style/prime-ng/prime-ng.module';
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { HeaderComponent } from './shared/components/header/header.component';
 
 @Component({
   selector: 'app-root',
