@@ -126,7 +126,7 @@ export class GlobalService {
         pros: [
           'Althrough sometimes is difficult to find the classes of primeNG components, once you get it, it is really easy to modify',
           'You can do it on the component you want',
-          'Lot of variety in content'
+          'A lot of variety in content'
         ],
         cons: [
           'Sometimes it is hard to know the classes needed to customize it',
@@ -144,6 +144,23 @@ export class GlobalService {
         ]
       }
     },
+    {
+      feature: 'Design',
+      winner: EnumLibraries['Angular Material'],
+      primeNG: {
+        pros: [
+          'The shape is very good looking'
+        ],
+        cons: [
+          'The behabior and design is not that good'
+        ]
+      },
+      angularMaterial: {
+        pros: [
+          'Very good looking, soft and neat'
+        ]
+      }
+    }
   ];
 
   getResults(): Results[] {
