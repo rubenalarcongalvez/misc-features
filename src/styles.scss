@@ -44,8 +44,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     }
 }
 
-/* REALLY difficult to find out how to set this... */
-.mdc-tab-indicator__content--underline {
+/* REALLY difficult to find out how to set these... */
+/* The first is for the colors of the tabs, the second for the arrows */
+.mdc-tab-indicator__content--underline, .mat-mdc-tab-header-pagination-chevron {
     color: #1d4ed8 !important;
     border-color: #1d4ed8 !important;
 }

@@ -1,10 +1,11 @@
 .mat-test {
     background-color: #1d4ed8;
-    border-radius: 2rem;
     /* This added just to be similar to PrimeNG, by default, Material is better */
     font-size: 14px;
     height: fit-content;
     padding: 8px;
+    border-start-start-radius: 5px;
+    border-end-start-radius: 5px;
     border-end-end-radius: 99px;
     border-start-end-radius: 99px;
 }
