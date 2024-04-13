@@ -49,3 +49,20 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     color: #1d4ed8 !important;
     border-color: #1d4ed8 !important;
 }
+
+.primeng {
+    @apply bg-red-600 text-white font-normal rounded p-1;
+}
+
+.angular-material {
+    @apply bg-orange-600 text-white font-normal rounded p-1;
+}
+
+main {
+    flex-wrap: wrap;
+
+    section {
+        justify-content: center;
+        align-items: center;
+    }
+}

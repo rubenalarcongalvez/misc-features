@@ -20,8 +20,8 @@ import { SplitterComponent } from './views/splitter/splitter.component';
 import { TabMenuComponent } from './views/tab-menu/tab-menu.component';
 import { TableComponent } from './views/table/table.component';
 import { ToastComponent } from './views/toast/toast.component';
-import { TooltipComponent } from '@angular/material/tooltip';
 import { TreeComponent } from './views/tree/tree.component';
+import { TooltipComponent } from './views/tooltip/tooltip.component';
 
 export const routes: Routes = [
     {path: '', component: HomeComponent, pathMatch: 'full'},
