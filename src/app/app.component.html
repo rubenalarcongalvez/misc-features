@@ -1,11 +1,13 @@
 <div class="min-h-full flex flex-col justify-between">
-  <!-- I put z-index higher to put the sidebar (both PrimeNG and Material) in front (to fix it) -->
-  <!-- To primeNG, we shall put it over 1001 -->
-  <app-header class="remove-to-print" style="z-index: 9999;"></app-header>
-
-  <main class="p-2 flex-grow">
-    <router-outlet></router-outlet>
-  </main>
-
+  <div class="container my-0 mx-auto">
+    <!-- I put z-index higher to put the sidebar (both PrimeNG and Material) in front (to fix it) -->
+    <!-- To primeNG, we shall put it over 1001 -->
+    <app-header class="remove-to-print" style="z-index: 9999;"></app-header>
+  
+    <main class="p-2 flex-grow">
+      <router-outlet></router-outlet>
+    </main>
+  
+  </div>
   <app-footer class="remove-to-print"></app-footer>
 </div>
