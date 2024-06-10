@@ -181,7 +181,34 @@ export class GlobalService {
           'If you are migrating from other device, or you have a different version of PrimeNG, it could be a bit inconsistent'
         ]
       }
-    }
+    },
+    {
+      feature: 'Autocomplete',
+      winner: EnumLibraries['PrimeNG'],
+      primeNG: {
+        pros: [
+          'The shape is very good looking',
+          'Lots of features',
+          'A Lot of customization',
+          'Easy to set up'
+        ],
+        cons: [
+          'Poor guides',
+          'Cannot set a fully customizable template easily as putting an initial <code>option</code> before all of the rests, as a <code>None</code> option'
+        ]
+      },
+      angularMaterial: {
+        pros: [
+          'Very good looking, soft and neat',
+          'Can put a fully customizable template'
+        ],
+        cons: [
+          'Few features',
+          'Difficult to set up options',
+          'Apperance not so customizable',
+        ]
+      }
+    },
   ];
 
   getResults(): Results[] {

@@ -5,11 +5,48 @@
 <main class="flex justify-evenly gap-2">
     <section class="flex flex-col gap-2">
         <h3 class="primeng text-center w-fit">PrimeNG</h3>
+        <form [formGroup]="formGroup!">
+            <p-autoComplete 
+                formControlName="selectedCountry"
+                [suggestions]="filteredCountries!" 
+                (completeMethod)="filterCountry($event)" 
+                field="name"
+                inputStyleClass="p-3"
+                panelStyleClass="text-xl"
+                [dropdown]="true"
+                dropdownMode="current"
+                [completeOnFocus]="true"
+                [showEmptyMessage]="true"
+                emptyMessage="No countries to show"
+                inputId="float-label"
+            >
+            </p-autoComplete>
+        </form>
     </section>
 
     <hr class="border-blue-400">
 
     <section class="flex flex-col gap-2">
         <h3 class="angular-material text-center w-fit">Angular Material</h3>
+        <form [formGroup]="formGroup!">
+            <mat-form-field appearance="fill">
+                <mat-label>Country</mat-label>
+                <input type="text"
+                       matInput
+                       [formControlName]="'selectedCountry'"
+                       [matAutocomplete]="auto">
+                <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                  <mat-option *ngFor="let country of filteredCountriesMaterial | async" [value]="country">
+                    {{ country.name }}
+                  </mat-option>
+                </mat-autocomplete>
+              </mat-form-field>
+        </form>
     </section>
 </main>
+
+<br>
+
+@if (formGroup?.get('selectedCountry')?.value.name) {
+    <h2 class="text-center">Choosen country: <span>{{formGroup?.get('selectedCountry')?.value?.name}}, ({{formGroup?.get('selectedCountry')?.value?.code}})</span></h2>
+}
