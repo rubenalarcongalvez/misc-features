@@ -14,5 +14,5 @@ import { HeaderComponent } from './shared/components/header/header.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'misc-features';
+  title = 'Prime NG vs Angular Material';
 }

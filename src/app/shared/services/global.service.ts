@@ -160,6 +160,28 @@ export class GlobalService {
           'Very good looking, soft and neat'
         ]
       }
+    },
+    {
+      feature: 'Stability and consistency',
+      winner: EnumLibraries['Angular Material'],
+      angularMaterial: {
+        pros: [
+          'Very good consistency and stable',
+          'It has the credibility of Angular and Google, and since we use Angular, it will be very stable'
+        ],
+        cons: [
+          'A bit difficult to modify and always Google style'
+        ]
+      },
+      primeNG: {
+        pros: [
+          'Easy to customize'
+        ],
+        cons: [
+          'Sometimes, it brokes',
+          'If you are migrating from other device, or you have a different version of PrimeNG, it could be a bit inconsistent'
+        ]
+      }
     }
   ];
 
