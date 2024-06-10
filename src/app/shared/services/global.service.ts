@@ -178,7 +178,6 @@ export class GlobalService {
           'Easy to customize'
         ],
         cons: [
-          'Sometimes, it brokes',
           'If you are migrating from other device, or you have a different version of PrimeNG, it could be a bit inconsistent'
         ]
       }
