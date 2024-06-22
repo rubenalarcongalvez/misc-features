@@ -13,13 +13,14 @@
                 field="name"
                 inputStyleClass="p-3"
                 panelStyleClass="text-xl"
-                [dropdown]="true"
                 dropdownMode="current"
                 [completeOnFocus]="true"
                 [showEmptyMessage]="true"
                 emptyMessage="No countries to show"
-                inputId="float-label"
             >
+                <ng-template let-country pTemplate="item">
+                    <span class="px-3">{{country.name}}</span>
+                </ng-template>
             </p-autoComplete>
         </form>
     </section>
@@ -36,9 +37,11 @@
                        [formControlName]="'selectedCountry'"
                        [matAutocomplete]="auto">
                 <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
-                  <mat-option *ngFor="let country of filteredCountriesMaterial | async" [value]="country">
-                    {{ country.name }}
-                  </mat-option>
+                    @for (country of filteredCountriesMaterial | async; track country.name) {
+                        <mat-option [value]="country">
+                            {{ country.name }}
+                        </mat-option> 
+                    }
                 </mat-autocomplete>
               </mat-form-field>
         </form>

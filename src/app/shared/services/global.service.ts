@@ -10,6 +10,7 @@ export interface Results {
   feature: string,
   winner: EnumLibraries,
   link?: string,
+  relevance?: number, //If more than none
   primeNG?: {
     pros?: string[],
     cons?: string[],
@@ -28,6 +29,7 @@ export class GlobalService {
     {
       feature: 'Variety',
       winner: EnumLibraries.PrimeNG,
+      relevance: 4,
       primeNG: {
         pros: [
           'There are plenty of components. Nearly everything you need, you have it',
@@ -50,6 +52,7 @@ export class GlobalService {
     },
     {
       feature: 'Upgradability',
+      relevance: 3,
       winner: EnumLibraries['Angular Material'],
       primeNG: {
         pros: [
@@ -122,6 +125,7 @@ export class GlobalService {
     {
       feature: 'Flexibility and customizability',
       winner: EnumLibraries.PrimeNG,
+      relevance: 2,
       primeNG: {
         pros: [
           'Althrough sometimes is difficult to find the classes of primeNG components, once you get it, it is really easy to modify',
@@ -164,6 +168,7 @@ export class GlobalService {
     {
       feature: 'Stability and consistency',
       winner: EnumLibraries['Angular Material'],
+      relevance: 4,
       angularMaterial: {
         pros: [
           'Very good consistency and stable',
@@ -185,6 +190,7 @@ export class GlobalService {
     {
       feature: 'Autocomplete',
       winner: EnumLibraries['PrimeNG'],
+      link: 'autocomplete',
       primeNG: {
         pros: [
           'The shape is very good looking',

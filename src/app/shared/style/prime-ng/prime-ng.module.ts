@@ -18,6 +18,7 @@ import { TableModule } from 'primeng/table';
 import { ChipsModule } from 'primeng/chips';
 import { PanelModule } from 'primeng/panel';
 import { TabMenuModule } from 'primeng/tabmenu';
+import { BadgeModule } from 'primeng/badge';
 
 /* Extra */
 import { RatingModule } from 'primeng/rating';
@@ -48,6 +49,7 @@ import { FieldsetModule } from 'primeng/fieldset';
     ChipsModule,
     PanelModule,
     TabMenuModule,
+    BadgeModule,
 
     /* Extra */
     RatingModule,
@@ -76,6 +78,7 @@ import { FieldsetModule } from 'primeng/fieldset';
     ChipsModule,
     PanelModule,
     TabMenuModule,
+    BadgeModule,
 
     /* Extra */
     RatingModule,

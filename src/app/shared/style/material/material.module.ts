@@ -31,6 +31,7 @@ import { MatSortModule } from "@angular/material/sort";
 import { MatTableModule } from "@angular/material/table";
 import { MatTabsModule } from "@angular/material/tabs";
 import { MatStepperModule } from "@angular/material/stepper";
+import { MatBadgeModule } from '@angular/material/badge';
 
 import { CdkTableModule } from "@angular/cdk/table";
 
@@ -68,6 +69,7 @@ import { CdkTableModule } from "@angular/cdk/table";
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
+    MatBadgeModule,
     CdkTableModule
   ],
   exports: [
@@ -102,6 +104,7 @@ import { CdkTableModule } from "@angular/cdk/table";
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
+    MatBadgeModule,
     CdkTableModule
   ]
 })

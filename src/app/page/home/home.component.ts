@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { GlobalService, EnumLibraries } from '../../shared/services/global.service';
+import { GlobalService, EnumLibraries, Results } from '../../shared/services/global.service';
 import { MaterialModule } from '../../shared/style/material/material.module';
 import { PrimeNgModule } from '../../shared/style/prime-ng/prime-ng.module';
 
@@ -11,8 +11,14 @@ import { PrimeNgModule } from '../../shared/style/prime-ng/prime-ng.module';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent {
-  selectedIndex: number = 0;
+export class HomeComponent {  
+  get selectedIndex() : number {
+    return +sessionStorage.getItem('selectedIndex')!;
+  }
+
+  set selectedIndex(index: number) {
+    sessionStorage.setItem('selectedIndex', index.toString());
+  }
 
   constructor(private globalService: GlobalService) {}
 
@@ -29,9 +35,12 @@ export class HomeComponent {
   ties() {
     return this.results.filter(r => r.winner == EnumLibraries.Tie);
   }
+  totalPoints(list: Results[]) {
+    return list.reduce((previous, current) => previous + (current.relevance ?? 1), 0);
+  }
 
   winnerOverall(): string {
-    if(this.angularMaterialWins() > this.primeNGWins()) {
+    if(this.totalPoints(this.angularMaterialWins()) > this.totalPoints(this.primeNGWins())) {
       return 'Angular Material';
     } else if (this.angularMaterialWins() < this.primeNGWins()) {
       return 'PrimeNG';
@@ -45,7 +54,7 @@ export class HomeComponent {
   }
 
   changeIndexTab($event: any): void {
-    this.selectedIndex = $event.index;
+    this.selectedIndex = $event.index.toString();
   }
 
   printResults() {
