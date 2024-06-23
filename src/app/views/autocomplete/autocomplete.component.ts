@@ -61,8 +61,13 @@ export class AutocompleteComponent {
     return option ? option.name : '';
   }
 
-  private filterCountriesMaterial(value: string): Country[] {
-    const filterValue = value.toLowerCase();
+  private filterCountriesMaterial(value: string | Country): Country[] {
+    let filterValue = '';
+    if (typeof value === 'string') {
+      filterValue = value.toLowerCase();
+    } else {
+      filterValue = value.name.toLowerCase();
+    }
     return this.countries.filter(country => country.name.toLowerCase().startsWith(filterValue) || country.code.toLowerCase().startsWith(filterValue));
   }
 

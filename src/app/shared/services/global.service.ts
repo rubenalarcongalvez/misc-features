@@ -189,7 +189,7 @@ export class GlobalService {
     },
     {
       feature: 'Autocomplete',
-      winner: EnumLibraries['PrimeNG'],
+      winner: EnumLibraries['Tie'],
       link: 'autocomplete',
       primeNG: {
         pros: [
@@ -200,18 +200,19 @@ export class GlobalService {
         ],
         cons: [
           'Poor guides',
-          'Cannot set a fully customizable template easily as putting an initial <code>option</code> before all of the rests, as a <code>None</code> option'
+          'Cannot set a fully customizable template easily as putting an initial <code>option</code> before all of the rests, as a <code>None</code> option. It is not well centered if we use margin 0 by default, so we should edit all individually',
+          'The directive <code>completeMethod</code> does not work if the input is filled and we delete it all, so it won\'t show the list in that case, so we should make it like in Angular Material'
         ]
       },
       angularMaterial: {
         pros: [
-          'Very good looking, soft and neat',
-          'Can put a fully customizable template'
+          'Soft and neat transactions',
+          'Can put a fully customizable template easily',
         ],
         cons: [
           'Few features',
           'Difficult to set up options',
-          'Apperance not so customizable',
+          'Global apperance not so customizable',
         ]
       }
     },

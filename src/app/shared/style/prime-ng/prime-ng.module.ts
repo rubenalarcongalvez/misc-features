@@ -26,6 +26,7 @@ import { PickListModule } from 'primeng/picklist';
 import { CarouselModule } from 'primeng/carousel';
 import { SplitterModule } from 'primeng/splitter';
 import { FieldsetModule } from 'primeng/fieldset';
+import { FloatLabelModule } from 'primeng/floatlabel';
 
 @NgModule({
   declarations: [],
@@ -57,6 +58,7 @@ import { FieldsetModule } from 'primeng/fieldset';
     CarouselModule,
     SplitterModule,
     FieldsetModule,
+    FloatLabelModule,
   ],
   exports: [
     ButtonModule,
@@ -86,6 +88,7 @@ import { FieldsetModule } from 'primeng/fieldset';
     CarouselModule,
     SplitterModule,
     FieldsetModule,
+    FloatLabelModule,
   ]
 })
 export class PrimeNgModule { }
