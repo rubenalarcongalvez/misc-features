@@ -3,7 +3,7 @@
 <br>
 
 <main class="flex justify-evenly gap-2">
-    <section class="flex flex-col gap-2">
+    <section class="flex flex-col gap-2 justify-start">
         <h3 class="primeng text-center w-fit">PrimeNG</h3>
         <form [formGroup]="formGroup!">
             <p-floatLabel>
@@ -14,27 +14,29 @@
                     field="name"
                     inputStyleClass="p-3"
                     panelStyleClass="py-2"
-                    dropdownMode="current"
                     [completeOnFocus]="true"
                     [showEmptyMessage]="true"
                     inputId="float-label"
                     delay="0"
+                    showClear="true"
+                    dropdown="true"
+                    dropdownMode="current"
                 >
                     <ng-template let-country pTemplate="item">
-                        <span>{{country.name}}</span>
+                        <span>{{country?.name}}</span>
                     </ng-template>
                     <ng-template pTemplate="empty">
-                        <span class="p-[12px]">No countries to show</span>
+                        <span>No countries to show</span>
                     </ng-template>
                 </p-autoComplete>
-                <label for="float-label" class="top-[40%]">Country</label> <!-- We should know this label for float label has position absolute on primeNG -->
+                <label for="float-label">Country</label> <!-- We should know this label for float label has position absolute on primeNG -->
             </p-floatLabel>
         </form>
     </section>
 
     <hr class="border-blue-400">
 
-    <section class="flex flex-col gap-2">
+    <section class="flex flex-col gap-2 justify-start">
         <h3 class="angular-material text-center w-fit">Angular Material</h3>
         <form [formGroup]="formGroup!">
             <mat-form-field appearance="fill">
@@ -46,7 +48,7 @@
                 <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
                     @for (country of filteredCountriesMaterial | async; track country) {
                         <mat-option [value]="country">
-                            {{ country.name }}
+                            {{ country?.name }}
                         </mat-option> 
                     }
                 </mat-autocomplete>
@@ -57,6 +59,6 @@
 
 <br>
 
-@if (formGroup?.get('selectedCountry')?.value.name) {
+@if (formGroup?.get('selectedCountry')?.value?.name) {
     <h2 class="text-center">Choosen country: <span>{{formGroup?.get('selectedCountry')?.value?.name}}, ({{formGroup?.get('selectedCountry')?.value?.code}})</span></h2>
 }

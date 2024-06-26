@@ -1,1 +1,19 @@
-<p>badge works!</p>
+<h1 class="text-center w-full text-blue-600">Badge</h1>
+
+<h2>Badge content: <input id="badge-content" class="text-blue-600" type="text" [(ngModel)]="badgeContent"></h2>
+
+<br>
+
+<main class="flex justify-evenly gap-2">
+    <section class="flex flex-col gap-2 justify-start">
+        <h3 class="primeng text-center w-fit">PrimeNG</h3>
+        <h3>This is a text with a <span class="mr-2 pr-3 p-overlay-badge" pBadge [value]="badgeContent">badge</span> on it</h3>
+    </section>
+
+    <hr class="border-blue-400">
+
+    <section class="flex flex-col gap-2 justify-start">
+        <h3 class="angular-material text-center w-fit">Angular Material</h3>
+        <h3>This is a text with a <span class="mr-4" [matBadge]="badgeContent" matBadgeOverlap="false">badge</span> on it</h3>
+    </section>
+</main>

@@ -29,7 +29,7 @@ export class GlobalService {
     {
       feature: 'Variety',
       winner: EnumLibraries.PrimeNG,
-      relevance: 4,
+      relevance: 5,
       primeNG: {
         pros: [
           'There are plenty of components. Nearly everything you need, you have it',
@@ -189,7 +189,7 @@ export class GlobalService {
     },
     {
       feature: 'Autocomplete',
-      winner: EnumLibraries['Tie'],
+      winner: EnumLibraries['Angular Material'],
       link: 'autocomplete',
       primeNG: {
         pros: [
@@ -201,7 +201,8 @@ export class GlobalService {
         cons: [
           'Poor guides',
           'Cannot set a fully customizable template easily as putting an initial <code>option</code> before all of the rests, as a <code>None</code> option. It is not well centered if we use margin 0 by default, so we should edit all individually',
-          'The directive <code>completeMethod</code> does not work if the input is filled and we delete it all, so it won\'t show the list in that case, so we should make it like in Angular Material'
+          'The directive <code>completeMethod</code> does not work if the input is filled and we delete it all, so it won\'t show the list in that case, so we should make it like in Angular Material',
+          'Not possible to have <code>completeMethod</code> to execute when the input is empty, so the panel is not shown when input is written and then removed'
         ]
       },
       angularMaterial: {
@@ -213,6 +214,30 @@ export class GlobalService {
           'Few features',
           'Difficult to set up options',
           'Global apperance not so customizable',
+        ]
+      }
+    },
+    {
+      feature: 'Badge',
+      winner: EnumLibraries['Angular Material'],
+      link: 'badge',
+      angularMaterial: {
+        pros: [
+          'Much more stable',
+          'Very easy to set up',
+        ],
+        cons: [
+          'The content collapses in certain width, it meant to be useful for large numbers but I would prefer to handle it by myself',
+        ]
+      },
+      primeNG: {
+        pros: [
+          'You can put a badge alone',
+          'Content of the badge is easier to modify and put style',
+        ],
+        cons: [
+          'The badge has no overlapping option to avoid be put on a text (but can be solved with some margin',
+          'When the content is empty, it is not hidden, so we should put style on it instead'
         ]
       }
     },
