@@ -189,7 +189,7 @@ export class GlobalService {
     },
     {
       feature: 'Autocomplete',
-      winner: EnumLibraries['Angular Material'],
+      winner: EnumLibraries['Tie'],
       link: 'autocomplete',
       primeNG: {
         pros: [
@@ -202,7 +202,7 @@ export class GlobalService {
           'Poor guides',
           'Cannot set a fully customizable template easily as putting an initial <code>option</code> before all of the rests, as a <code>None</code> option. It is not well centered if we use margin 0 by default, so we should edit all individually',
           'The directive <code>completeMethod</code> does not work if the input is filled and we delete it all, so it won\'t show the list in that case, so we should make it like in Angular Material',
-          'Not possible to have <code>completeMethod</code> to execute when the input is empty, so the panel is not shown when input is written and then removed'
+          'Not possible to have <code>completeMethod</code> to execute when the input is empty, so the panel is not shown when input is written and then removed. <span class="text-red-600">This is a must have condition in my opinion, at least as a directive</span>'
         ]
       },
       angularMaterial: {
@@ -236,8 +236,32 @@ export class GlobalService {
           'Content of the badge is easier to modify and put style',
         ],
         cons: [
-          'The badge has no overlapping option to avoid be put on a text (but can be solved with some margin',
+          'The badge has no overlapping option to avoid be put on a text (but can be solved with some margin)',
           'When the content is empty, it is not hidden, so we should put style on it instead'
+        ]
+      }
+    },
+    {
+      feature: 'Calendar',
+      winner: EnumLibraries['PrimeNG'],
+      link: 'calendar',
+      angularMaterial: {
+        pros: [
+          'Better design in range dates',
+        ],
+        cons: [
+          'Cannot modify so much the calendar',
+          'Time not included, so you should use third party components to use it',
+          'Difficult to set up the format of the date'
+        ]
+      },
+      primeNG: {
+        pros: [
+          'Lots of features',
+          'Very customizable',
+          'Can put time and customize the panel and input',
+          'You can select the date format you want',
+          'Easy to set up'
         ]
       }
     },

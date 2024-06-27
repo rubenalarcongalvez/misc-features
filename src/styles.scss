@@ -15,6 +15,11 @@
         padding: 0;
         box-sizing: border-box;
     }
+
+    input {
+        padding-inline: .5rem;
+        padding-block: 0;
+    }
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
@@ -35,16 +40,20 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .p-button {
     background-color: #1d4ed8;
+    color: white;
     padding: 8px;
     font-size: 14px;
     border: none;
     display: flex;
     align-items: center;
-    gap: 8px;
 
     &:focus {
         box-shadow: none;
     }
+}
+
+.button-gap .p-button {
+    gap: 8px !important;
 }
 
 /* REALLY difficult to find out how to set these... */

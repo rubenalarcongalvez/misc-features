@@ -34,6 +34,7 @@ import { MatStepperModule } from "@angular/material/stepper";
 import { MatBadgeModule } from '@angular/material/badge';
 
 import { CdkTableModule } from "@angular/cdk/table";
+import { MatNativeDateModule, MatRippleModule } from "@angular/material/core";
 
 @NgModule({
   imports: [
@@ -52,12 +53,12 @@ import { CdkTableModule } from "@angular/cdk/table";
     MatInputModule,
     MatListModule,
     MatMenuModule,
-    // MatNativeDateModule,
+    MatNativeDateModule,
     MatPaginatorModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,
     MatRadioModule,
-    // MatRippleModule,
+    MatRippleModule,
     MatSelectModule,
     MatSidenavModule,
     MatSliderModule,
@@ -87,12 +88,12 @@ import { CdkTableModule } from "@angular/cdk/table";
     MatInputModule,
     MatListModule,
     MatMenuModule,
-    // MatNativeDateModule,
+    MatNativeDateModule,
     MatPaginatorModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,
     MatRadioModule,
-    // MatRippleModule,
+    MatRippleModule,
     MatSelectModule,
     MatSidenavModule,
     MatSliderModule,

@@ -4,7 +4,7 @@
 
 <div class="flex gap-2 items-center">
     <h1>Results overall winner: <span class="font-normal underline">{{winnerOverall()}}</span></h1>
-    <p-button label="Print" icon="pi pi-print" iconPos="right" (click)="printResults()" class="remove-to-print"></p-button>
+    <p-button label="Print" icon="pi pi-print" iconPos="right" (click)="printResults()" class="remove-to-print button-gap"></p-button>
     <!-- <button mat-button color="print">
         <span>Print</span>
         <mat-icon class="mat-18" iconPositionEnd>print</mat-icon>
@@ -55,39 +55,47 @@
             <div class="grid grid-cols-2 gap-2">
                 <article>
                     <h3 class="text-center m-4"><span class="primeng">PrimeNG</span></h3>
-                    <h4 class="text-green-600">Pros - <span class="text-sm text-white bg-green-700 font-normal rounded-full px-1">{{tab.primeNG?.pros?.length ? tab.primeNG?.pros?.length : 0}}</span></h4>
-                    <ul class="list-decimal list-inside">
-                        @for (pro of tab.primeNG?.pros; track $index) {
-                            <li class="m-2" [innerHTML]="pro + '.'">.</li>
-                        } @empty {
-                            <br>
-                        }
-                    </ul>
+                    @if (tab.primeNG?.pros?.length) {
+                        <h4 class="text-green-600">Pros - <span class="text-sm text-white bg-green-700 font-normal rounded-full px-1">{{tab.primeNG?.pros?.length}}</span></h4>
+                        <ul class="list-decimal list-inside">
+                            @for (pro of tab.primeNG?.pros; track $index) {
+                                <li class="m-2" [innerHTML]="pro + '.'">.</li>
+                            } @empty {
+                                <br>
+                            }
+                        </ul>
+                    }
 
-                    <h4 class="text-red-600">Cons - <span class="text-sm text-white bg-red-700 font-normal rounded-full px-1">{{tab.primeNG?.cons?.length ? tab.primeNG?.cons?.length : 0}}</span></h4>
-                    <ul class="list-decimal list-inside">
-                        @for (con of tab.primeNG?.cons; track $index) {
-                            <li class="m-2" [innerHTML]="con + '.'">.</li>
-                        }
-                    </ul>
+                    @if (tab.primeNG?.cons?.length) {
+                        <h4 class="text-red-600">Cons - <span class="text-sm text-white bg-red-700 font-normal rounded-full px-1">{{tab.primeNG?.cons?.length}}</span></h4>
+                        <ul class="list-decimal list-inside">
+                            @for (con of tab.primeNG?.cons; track $index) {
+                                <li class="m-2" [innerHTML]="con + '.'">.</li>
+                            }
+                        </ul>
+                    }
                 </article>
                 <article>
                     <h3 class="text-center m-4"><span class="angular-material">Angular Material</span></h3>
-                    <h4 class="text-green-600">Pros - <span class="text-sm text-white bg-green-700 font-normal rounded-full px-1">{{tab.angularMaterial?.pros?.length ? tab.angularMaterial?.pros?.length : 0}}</span></h4>
-                    <ul class="list-decimal list-inside">
-                        @for (pro of tab.angularMaterial?.pros; track $index) {
-                            <li class="m-2" [innerHTML]="pro + '.'"></li>
-                        } @empty {
-                            <br>
-                        }
-                    </ul>
+                    @if (tab.angularMaterial?.pros?.length) {
+                        <h4 class="text-green-600">Pros - <span class="text-sm text-white bg-green-700 font-normal rounded-full px-1">{{tab.angularMaterial?.pros?.length}}</span></h4>
+                        <ul class="list-decimal list-inside">
+                            @for (pro of tab.angularMaterial?.pros; track $index) {
+                                <li class="m-2" [innerHTML]="pro + '.'"></li>
+                            } @empty {
+                                <br>
+                            }
+                        </ul>
+                    }
 
-                    <h4 class="text-red-600">Cons - <span class="text-sm text-white bg-red-700 font-normal rounded-full px-1">{{tab.angularMaterial?.cons?.length ? tab.angularMaterial?.cons?.length : 0}}</span></h4>
-                    <ul class="list-decimal list-inside">
-                        @for (con of tab.angularMaterial?.cons; track $index) {
-                            <li class="m-2" [innerHTML]="con + '.'"></li>
-                        }
-                    </ul>
+                    @if (tab.angularMaterial?.cons?.length) {
+                        <h4 class="text-red-600">Cons - <span class="text-sm text-white bg-red-700 font-normal rounded-full px-1">{{tab.angularMaterial?.cons?.length ? tab.angularMaterial?.cons?.length : 0}}</span></h4>
+                        <ul class="list-decimal list-inside">
+                            @for (con of tab.angularMaterial?.cons; track $index) {
+                                <li class="m-2" [innerHTML]="con + '.'"></li>
+                            }
+                        </ul>
+                    }
                 </article>
             </div>
         </mat-tab>

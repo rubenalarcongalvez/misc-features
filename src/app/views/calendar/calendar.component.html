@@ -5,11 +5,26 @@
 <main class="flex justify-evenly gap-2">
     <section class="flex flex-col gap-2 justify-start">
         <h3 class="primeng text-center w-fit">PrimeNG</h3>
+            <p-calendar 
+                [(ngModel)]="date" 
+                [showIcon]="true" 
+                dateFormat="dd/mm/yy -"
+                hourFormat="24"
+                [showTime]="true"
+                inputStyleClass="text-blue-600"
+                panelStyleClass="text-black"
+                showButtonBar="true"
+            />
     </section>
 
     <hr class="border-blue-400">
 
     <section class="flex flex-col gap-2 justify-start">
         <h3 class="angular-material text-center w-fit">Angular Material</h3>
+        <mat-form-field matTooltip="It is necessary to install MomentDateAdapter in order to change the format of the date">
+            <input [(ngModel)]="date" matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
     </section>
 </main>
