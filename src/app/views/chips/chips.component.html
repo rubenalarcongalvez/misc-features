@@ -5,11 +5,40 @@
 <main class="flex justify-evenly gap-2">
     <section class="flex flex-col gap-2 justify-start">
         <h3 class="primeng text-center w-fit">PrimeNG</h3>
+        <p-chips 
+            [max]="3" 
+            placeholder="Maximum 3 items" 
+            allowDuplicate="false"
+        />
     </section>
 
     <hr class="border-blue-400">
 
     <section class="flex flex-col gap-2 justify-start">
         <h3 class="angular-material text-center w-fit">Angular Material</h3>
+        <mat-form-field class="example-chip-list">
+            <mat-label>Maximun 3 items</mat-label>
+            <mat-chip-grid #chipGrid aria-label="Enter items">
+              @for (item of items; track item) {
+                <mat-chip-row
+                  (removed)="remove(item)"
+                  [editable]="true"
+                  (edited)="edit(item, $event)"
+                  [aria-description]="'press enter to edit ' + item"
+                >
+                  {{item}}
+                  <button matChipRemove [attr.aria-label]="'remove ' + item">
+                    <mat-icon>cancel</mat-icon>
+                  </button>
+                </mat-chip-row>
+              }
+                <input
+                placeholder="New item..."
+                [matChipInputFor]="chipGrid"
+                (matChipInputTokenEnd)="add($event)"
+                [ngClass]="{'hidden': items.length >= 3}"
+              />
+            </mat-chip-grid>
+          </mat-form-field>
     </section>
 </main>

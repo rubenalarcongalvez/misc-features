@@ -24,6 +24,13 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+code {
+    color: red;
+    background-color: rgb(200, 200, 200);
+    border-radius: 5px;
+    padding: 3px;
+}
+
 .display-to-print {
     display: none;
 
@@ -38,9 +45,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     }
 }
 
-.p-button {
-    background-color: #1d4ed8;
-    color: white;
+.p-button:not(.icon) {
     padding: 8px;
     font-size: 14px;
     border: none;
@@ -49,6 +54,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
     &:focus {
         box-shadow: none;
+    }
+
+    &:not(.icon *) {
+        background-color: #1d4ed8;
+        color: white;
     }
 }
 

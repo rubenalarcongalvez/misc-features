@@ -60,8 +60,4 @@ export class AutocompleteComponent {
 
       this.filteredCountries = filtered;
   }
-
-  log() {
-    console.log(this.filteredCountries);
-  }
 }

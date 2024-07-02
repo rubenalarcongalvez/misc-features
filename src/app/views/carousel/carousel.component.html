@@ -4,7 +4,46 @@
 
 <main class="flex justify-evenly gap-2">
     <section class="flex flex-col gap-2 justify-start">
-        <h3 class="primeng text-center w-fit">PrimeNG</h3>
+        <h3 class="text-center w-fit">PrimeNG</h3>
         <h4 class="text-center">This is only in PrimeNG, so it will count in the "variety" section</h4>
+        <p-carousel 
+            [value]="products!" 
+            [numVisible]="1" 
+            [numScroll]="1" 
+            orientation="vertical"
+            verticalViewPortHeight="325px"
+        >
+                <ng-template let-product pTemplate="item">
+                    <div class="border border-solid border-gray-300 rounded p-3">
+                        <div>
+                            <div class="relative mx-auto">
+                                <img 
+                                    src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" 
+                                    [alt]="product.name" 
+                                    class="w-full rounded" />
+                                <p-tag 
+                                    [value]="product.inventoryStatus" 
+                                    [severity]="getSeverity(product.inventoryStatus)" 
+                                    class="absolute" 
+                                    styleClass="p-1"
+                                    [ngStyle]="{ 'left.px': 5, 'top.px': 5 }" 
+                                />
+                            </div>
+                        </div>
+                        <div class="mb-3 font-medium">
+                            {{ product.name }}
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="mt-0 font-semibold text-xl">
+                                {{ '$' + product.price }}
+                            </div>
+                            <span class="flex">
+                                <p-button icon="pi pi-heart" class="icon" severity="secondary" [outlined]="true" />
+                                <p-button icon="pi pi-shopping-cart" class="ml-2 icon" />
+                            </span>
+                        </div>
+                    </div>
+                </ng-template>
+        </p-carousel>
     </section>
 </main>

@@ -1,0 +1,25 @@
+:host ::ng-deep {
+    .p-chips-multiple-container {
+        display: flex;
+        gap: 5px;
+        padding: .5rem;
+    }
+
+    .p-chips-token {
+        display: flex;
+        gap: 4px;
+        padding-inline: 5px !important;
+    }
+
+    .p-chips-input-token {
+        input {            
+            padding-inline: 0;
+            min-width: 125px;
+            field-sizing: content;
+
+            &:disabled {
+                min-width: 0 !important;
+            }
+        }
+    }
+}

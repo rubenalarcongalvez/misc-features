@@ -27,6 +27,25 @@ export interface Results {
 export class GlobalService {
   private results: Results[] = [
     {
+      feature: 'Style and component customization',
+      winner: EnumLibraries['PrimeNG'],
+      relevance: 3,
+      angularMaterial: {
+        pros: [
+          'Can edit the basics, with the properties given',
+        ],
+        cons: [
+          'If you want to customize all, it is really difficult to change it from one property',
+        ]
+      },
+      primeNG: {
+        pros: [
+          'Very easy to customize with the properties given',
+          'If you cannot customize the components with the properties or templates, you can use <code>:host :ng-deep</code> to customize the elements you want in particular',
+        ],
+      }
+    },
+    {
       feature: 'Variety',
       winner: EnumLibraries.PrimeNG,
       relevance: 5,
@@ -262,6 +281,29 @@ export class GlobalService {
           'Can put time and customize the panel and input',
           'You can select the date format you want',
           'Easy to set up'
+        ]
+      }
+    },
+    {
+      feature: 'Chips',
+      winner: EnumLibraries['Angular Material'],
+      link: 'chips',
+      angularMaterial: {
+        pros: [
+          'Can edit the chips',
+          'More visual and can put placeholder for new items',
+        ],
+        cons: [
+          'More complicated to set up',
+        ]
+      },
+      primeNG: {
+        pros: [
+          'Very easy to set up'
+        ],
+        cons: [
+          'Cannot edit a chip. You must delete and define another one',
+          'Not responsive by default'
         ]
       }
     },

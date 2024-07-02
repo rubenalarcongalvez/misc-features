@@ -1,0 +1,42 @@
+:host ::ng-deep {
+    .product-item {
+        .product-item-content {
+            border: 1px solid var(--surface-d);
+            border-radius: 3px;
+            margin: .3rem;
+            text-align: center;
+            padding: 2rem 0;
+        }
+    
+        .product-image {
+            width: 50%;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+        }
+    }
+
+    .p-carousel-items-content {
+        @media(max-width: 350px) {
+            height: 300px !important;
+        }
+        @media(max-width: 300px) {
+            height: 275px !important;
+        }
+    }
+
+    .p-carousel-indicators {
+        margin-top: 5px;
+        display: flex;
+        gap: 5px;
+
+        .p-carousel-indicator {
+            width: auto;
+            button {
+                border-radius: 10px;
+    
+                &[aria-current="page"] {
+                    background-color: #1d4ed8;
+                }
+            }
+        }
+    }
+}
