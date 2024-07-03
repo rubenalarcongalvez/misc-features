@@ -35,14 +35,14 @@ export class HomeComponent {
   ties() {
     return this.results.filter(r => r.winner == EnumLibraries.Tie);
   }
-  totalPoints(list: Results[]) {
+  totalPoints(list: Results[]): number {
     return list.reduce((previous, current) => previous + (current.relevance ?? 1), 0);
   }
 
   winnerOverall(): string {
     if(this.totalPoints(this.angularMaterialWins()) > this.totalPoints(this.primeNGWins())) {
       return 'Angular Material';
-    } else if (this.angularMaterialWins() < this.primeNGWins()) {
+    } else if (this.totalPoints(this.angularMaterialWins()) < this.totalPoints(this.primeNGWins())) {
       return 'PrimeNG';
     } else {
       return 'Tie';
