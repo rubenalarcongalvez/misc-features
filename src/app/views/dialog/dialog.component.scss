@@ -1,0 +1,28 @@
+:host ::ng-deep { 
+    .p-dialog-header-icon {
+        background-color: white !important;
+        color: black !important;
+    }
+
+    .p-dialog {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    .p-dialog-header {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .p-dialog-content {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .p-dialog-header, .p-dialog-content {
+        padding: 1rem;
+    }
+}
+
+button[mat-button] {
+    background-color: #1d4ed8;
+    color: white;
+}

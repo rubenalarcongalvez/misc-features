@@ -307,6 +307,28 @@ export class GlobalService {
         ]
       }
     },
+    {
+      feature: 'Dialog',
+      winner: EnumLibraries['PrimeNG'],
+      link: 'dialog',
+      angularMaterial: {
+        pros: [
+          'Good aspect by default',
+        ],
+        cons: [
+          'Not so much directives nor customization',
+          'You have to create and call another component for the dialog',
+          'Sharing information between these components may be more tedious',
+        ]
+      },
+      primeNG: {
+        pros: [
+          'Lots of directives as dragging and resize',
+          'You can customize all',
+          'You can put the code that goes inside the dialog in the same component, so the sharing is direct and easier'
+        ],
+      }
+    },
   ];
 
   getResults(): Results[] {
