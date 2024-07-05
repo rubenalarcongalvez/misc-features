@@ -1,0 +1,13 @@
+:host ::ng-deep {
+    .p-fieldset {
+        padding: .5rem 1rem;
+        border: 1px solid blue;
+    }
+
+    .p-fieldset-legend .p-ripple {
+        padding: .5rem;
+        margin-inline: .2rem;
+        display: flex;
+        gap: 5px;
+    }
+}
