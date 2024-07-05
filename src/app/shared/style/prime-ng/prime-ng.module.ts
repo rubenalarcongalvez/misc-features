@@ -28,6 +28,7 @@ import { SplitterModule } from 'primeng/splitter';
 import { FieldsetModule } from 'primeng/fieldset';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { TagModule } from 'primeng/tag';
+import { RippleModule } from 'primeng/ripple';
 
 @NgModule({
   declarations: [],
@@ -60,7 +61,8 @@ import { TagModule } from 'primeng/tag';
     SplitterModule,
     FieldsetModule,
     FloatLabelModule,
-    TagModule
+    TagModule,
+    RippleModule,
   ],
   exports: [
     ButtonModule,
@@ -91,7 +93,8 @@ import { TagModule } from 'primeng/tag';
     SplitterModule,
     FieldsetModule,
     FloatLabelModule,
-    TagModule
+    TagModule,
+    RippleModule,
   ]
 })
 export class PrimeNgModule { }

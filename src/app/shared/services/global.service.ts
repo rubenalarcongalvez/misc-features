@@ -27,7 +27,7 @@ export interface Results {
 export class GlobalService {
   private results: Results[] = [
     {
-      feature: 'Style and component customization',
+      feature: 'Flexibility and customizability',
       winner: EnumLibraries['PrimeNG'],
       relevance: 3,
       angularMaterial: {
@@ -142,33 +142,7 @@ export class GlobalService {
       }
     },
     {
-      feature: 'Flexibility and customizability',
-      winner: EnumLibraries.PrimeNG,
-      relevance: 2,
-      primeNG: {
-        pros: [
-          'Althrough sometimes is difficult to find the classes of primeNG components, once you get it, it is really easy to modify',
-          'You can do it on the component you want',
-          'A lot of variety in content'
-        ],
-        cons: [
-          'Sometimes it is hard to know the classes needed to customize it',
-          'If you modify lots of things, it could be a bit unstable'
-        ]
-      },
-      angularMaterial: {
-        pros: [
-          'Easy to modify some components',
-          'Good desing, simple'
-        ],
-        cons: [
-          'Difficult to modify if you want a different product outside "Google style"',
-          'Classes are not found easily, nor you can inspect and see the classes, it is more difficult than primeNG'
-        ]
-      }
-    },
-    {
-      feature: 'Design',
+      feature: 'Base Design',
       winner: EnumLibraries['Angular Material'],
       primeNG: {
         pros: [
@@ -187,7 +161,7 @@ export class GlobalService {
     {
       feature: 'Stability and consistency',
       winner: EnumLibraries['Angular Material'],
-      relevance: 4,
+      relevance: 5,
       angularMaterial: {
         pros: [
           'Very good consistency and stable',
@@ -246,7 +220,7 @@ export class GlobalService {
           'Very easy to set up',
         ],
         cons: [
-          'The content collapses in certain width, it meant to be useful for large numbers but I would prefer to handle it by myself',
+          'The content collapses in certain width, it mean to be useful for large numbers but I would prefer to handle it by myself',
         ]
       },
       primeNG: {
@@ -327,6 +301,30 @@ export class GlobalService {
           'You can customize all',
           'You can put the code that goes inside the dialog in the same component, so the sharing is direct and easier'
         ],
+      }
+    },
+    {
+      feature: 'Drag & Drop',
+      winner: EnumLibraries['Angular Material'],
+      link: 'drag-drop',
+      angularMaterial: {
+        pros: [
+          'Fully customizable',
+          'Available for every element',
+          'Lots of directives',
+          'Neat and soft',
+          'Easy to set up',
+          'You can put the element wherever you want',
+        ],
+      },
+      primeNG: {
+        pros: [
+          'Drag list is useful and really similar to Angular Material',
+        ],
+        cons: [
+          'Very orthopedic style on drag',
+          'Difficult to customize',
+        ]
       }
     },
   ];

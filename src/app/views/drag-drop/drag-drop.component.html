@@ -2,14 +2,76 @@
 
 <br>
 
-<main class="flex justify-evenly gap-2">
-    <section class="flex flex-col gap-2 justify-start">
+<main class="flex flex-col items-center gap-2">
+    <section class="flex flex-col gap-2 justify-start w-full">
         <h3 class="primeng text-center w-fit">PrimeNG</h3>
+        <p-button pDraggable>Drag Me!</p-button>
+        <p-pickList 
+            [source]="sourceProducts" 
+            [target]="targetProducts" 
+            sourceHeader="Available" 
+            targetHeader="Selected" 
+            class="w-full"
+            [dragdrop]="true" 
+            [responsive]="true" 
+            [sourceStyle]="{ height: '30rem' }"
+            [targetStyle]="{ height: '30rem' }"
+            breakpoint="1400px"
+        >
+                <ng-template let-product pTemplate="item">
+                    <div class="flex flex-wrap p-2 items-center gap-3 border-solid border rounded border-gray-400">
+                        <div class="flex-1 flex flex-col gap-2">
+                            <span class="font-bold">{{ product.name }}</span>
+                            <div class="flex items-center gap-2">
+                                <i class="pi pi-tag text-sm"></i>
+                                <span>
+                                    {{ product.category }}
+                                </span>
+                            </div>
+                        </div>
+                        <span class="font-bold text-900">
+                            {{ '$' + product.price }}
+                        </span>
+                    </div>
+                </ng-template>
+        </p-pickList>
     </section>
 
-    <hr class="border-blue-400">
+    <hr class="border-blue-400 w-full m-3">
 
     <section class="flex flex-col gap-2 justify-start">
         <h3 class="angular-material text-center w-fit">Angular Material</h3>
+        <button cdkDrag class="!bg-blue-600 !text-white" mat-button>Drag Me!</button>
+        <article class="flex justify-evenly">
+            <div class="example-container">
+                <h2>To do</h2>
+                <div
+                  cdkDropList
+                  #todoList="cdkDropList"
+                  [cdkDropListData]="todo"
+                  [cdkDropListConnectedTo]="[doneList]"
+                  class="example-list"
+                  (cdkDropListDropped)="drop($event)">
+                  @for (item of todo; track item) {
+                    <div class="example-box" cdkDrag>{{item}}</div>
+                  }
+                </div>
+              </div>
+              
+            <div class="example-container">
+                <h2>Done</h2>
+                <div
+                    cdkDropList
+                    #doneList="cdkDropList"
+                    [cdkDropListData]="done"
+                    [cdkDropListConnectedTo]="[todoList]"
+                    class="example-list"
+                    (cdkDropListDropped)="drop($event)">
+                    @for (item of done; track item) {
+                    <div class="example-box" cdkDrag>{{item}}</div>
+                    }
+                </div>
+            </div> 
+        </article>         
     </section>
 </main>
