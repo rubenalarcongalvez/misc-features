@@ -9,7 +9,7 @@
 <!-- Angular Material Sidenav (sidebar) -->
 <!-- They are always put in the same component as the declaration of the sidenav -->
 <!-- We must put the mat-drawer-container among all the content if posible if we want to move the header in example -->
-<mat-drawer-container class="!bg-white" hasBackdrop="false">
+<mat-sidenav-container class="!bg-white" hasBackdrop="false">
     <!-- In Angular Material we HAVE to put fixedInViewport to fix it not to the component but to the viewport -->
     <mat-sidenav #materialSidenav mode="over" position="end" [fixedInViewport]="true" class="!bg-white !text-black">
         <app-sidebar></app-sidebar>
@@ -27,4 +27,4 @@
             <mat-icon iconPositionEnd class="mat-18">menu</mat-icon>
         </button>
     </header>
-</mat-drawer-container>
+</mat-sidenav-container>

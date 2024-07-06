@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InputGroupComponent } from './input-group.component';
+import { InputGroupComponent } from './button-group.component';
 
 describe('InputGroupComponent', () => {
   let component: InputGroupComponent;

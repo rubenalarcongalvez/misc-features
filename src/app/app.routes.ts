@@ -7,7 +7,7 @@ import { ChipsComponent } from './views/chips/chips.component';
 import { DialogComponent } from './views/dialog/dialog.component';
 import { DragDropComponent } from './views/drag-drop/drag-drop.component';
 import { FieldsetComponent } from './views/fieldset/fieldset.component';
-import { InputGroupComponent } from './views/input-group/input-group.component';
+import { ButtonGroupComponent } from './views/button-group/button-group.component';
 import { ListboxComponent } from './views/listbox/listbox.component';
 import { PaginatorComponent } from './views/paginator/paginator.component';
 import { PanelComponent } from './views/panel/panel.component';
@@ -35,7 +35,7 @@ export const routes: Routes = [
     {path: 'dialog', component: DialogComponent},
     {path: 'drag-drop', component: DragDropComponent},
     {path: 'fieldset', component: FieldsetComponent},
-    {path: 'input-group', component: InputGroupComponent},
+    {path: 'button-group', component: ButtonGroupComponent},
     {path: 'listbox', component: ListboxComponent},
     {path: 'paginator', component: PaginatorComponent},
     {path: 'panel', component: PanelComponent},

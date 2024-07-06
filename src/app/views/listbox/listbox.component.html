@@ -5,11 +5,45 @@
 <main class="flex justify-evenly gap-2">
     <section class="flex flex-col gap-2 justify-start">
         <h3 class="primeng text-center w-fit">PrimeNG</h3>
+        <article class="flex gap-5">
+            <p-listbox 
+            [options]="typesOfShoes" 
+            [(ngModel)]="optionsSelected" 
+            [multiple]="true" 
+            [metaKeySelection]="false"
+            showToggleAll="false"
+            checkbox="true"
+            listStyleClass="!max-h-full"
+            >
+                <ng-template let-shoe pTemplate="item">
+                    <div class="py-2">
+                        <div>{{ shoe }}</div>
+                    </div>
+                </ng-template>
+            </p-listbox>
+            <p-listbox 
+            [options]="typesOfShoes" 
+            [multiple]="true" 
+            [metaKeySelection]="false"
+            listStyleClass="!max-h-full"
+            >
+                <ng-template let-shoe pTemplate="item">
+                    <div class="py-2">
+                        <div>{{ shoe }}</div>
+                    </div>
+                </ng-template>
+            </p-listbox>
+        </article>
     </section>
 
     <hr class="border-blue-400">
 
     <section class="flex flex-col gap-2 justify-start">
         <h3 class="angular-material text-center w-fit">Angular Material</h3>
+        <mat-selection-list #shoes>
+        @for (shoe of typesOfShoes; track shoe) {
+            <mat-list-option>{{shoe}}</mat-list-option>
+        }
+        </mat-selection-list>
     </section>
 </main>

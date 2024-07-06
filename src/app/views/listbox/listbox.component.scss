@@ -1,0 +1,13 @@
+:host ::ng-deep {
+    .p-listbox-item {
+        display: flex;
+        gap: 5px;
+        padding: 7.5px 14px;
+        flex-direction: row-reverse;
+
+        :not(.p-checkbox, .p-checkbox *) {
+            flex-grow: 1;
+            padding-right: 5px;
+        }
+    }
+}

@@ -48,9 +48,6 @@ code {
 .p-button:not(.icon) {
     padding: 8px;
     font-size: 14px;
-    border: none;
-    display: flex;
-    align-items: center;
 
     &:focus {
         box-shadow: none;
@@ -59,7 +56,16 @@ code {
     &:not(.icon *) {
         background-color: #1d4ed8;
         color: white;
+
+        &:hover {
+            background-color: blue;
+            color: white;
+        }
     }
+}
+
+.p-button.p-highlight {
+    background-color: limegreen !important;
 }
 
 .button-gap .p-button {

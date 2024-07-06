@@ -3,7 +3,7 @@
 <br>
 
 <main class="flex justify-evenly gap-2">
-    <section class="flex flex-col gap-2 justify-start">
+    <section class="flex flex-col gap-2 justify-start flex-grow">
         <h3 class="primeng text-center w-fit">PrimeNG</h3>
             <p-calendar 
                 [(ngModel)]="date" 
@@ -21,7 +21,8 @@
 
     <section class="flex flex-col gap-2 justify-start">
         <h3 class="angular-material text-center w-fit">Angular Material</h3>
-        <mat-form-field matTooltip="It is necessary to install MomentDateAdapter in order to change the format of the date">
+        <p class="text-wrap">We can also use <code>datetime-picker</code> (another component outside Angular Material) to have the same calendar but with time.</p>
+        <mat-form-field matTooltip="It is necessary to install MomentDateAdapter in order to change the format of the date" appearance="outline">
             <input [(ngModel)]="date" matInput [matDatepicker]="picker">
             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>

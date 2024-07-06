@@ -19,6 +19,7 @@ import { ChipsModule } from 'primeng/chips';
 import { PanelModule } from 'primeng/panel';
 import { TabMenuModule } from 'primeng/tabmenu';
 import { BadgeModule } from 'primeng/badge';
+import { CheckboxModule } from 'primeng/checkbox';
 
 /* Extra */
 import { RatingModule } from 'primeng/rating';
@@ -29,6 +30,7 @@ import { FieldsetModule } from 'primeng/fieldset';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { TagModule } from 'primeng/tag';
 import { RippleModule } from 'primeng/ripple';
+import { SelectButtonModule } from 'primeng/selectbutton';
 
 @NgModule({
   declarations: [],
@@ -41,6 +43,7 @@ import { RippleModule } from 'primeng/ripple';
     CalendarModule,
     DialogModule,
     InputGroupModule,
+    SelectButtonModule,
     ProgressBarModule,
     ProgressSpinnerModule,
     ListboxModule,
@@ -53,6 +56,7 @@ import { RippleModule } from 'primeng/ripple';
     PanelModule,
     TabMenuModule,
     BadgeModule,
+    CheckboxModule,
 
     /* Extra */
     RatingModule,
@@ -73,6 +77,7 @@ import { RippleModule } from 'primeng/ripple';
     CalendarModule,
     DialogModule,
     InputGroupModule,
+    SelectButtonModule,
     ProgressBarModule,
     ProgressSpinnerModule,
     ListboxModule,
@@ -85,6 +90,7 @@ import { RippleModule } from 'primeng/ripple';
     PanelModule,
     TabMenuModule,
     BadgeModule,
+    CheckboxModule,
 
     /* Extra */
     RatingModule,

@@ -277,7 +277,8 @@ export class GlobalService {
         ],
         cons: [
           'Cannot edit a chip. You must delete and define another one',
-          'Not responsive by default'
+          'Not responsive by default',
+          'On Android <span class="text-red-600">IT DOES NOT WORK</span>'
         ]
       }
     },
@@ -327,11 +328,49 @@ export class GlobalService {
         ]
       }
     },
+    {
+      feature: 'Button Group',
+      winner: EnumLibraries['Tie'],
+      link: 'button-group',
+      angularMaterial: {
+        pros: [
+          'Easy to set up',
+          'You can put the template you like'
+        ],
+      },
+      primeNG: {
+        pros: [
+          'Easy to set up',
+          'You can put the template you like'
+        ],
+      }
+    },
+    {
+      feature: 'List box',
+      winner: EnumLibraries['PrimeNG'],
+      link: 'list-box',
+      angularMaterial: {
+        pros: [
+          'Easy to set up',
+          'You can put the template you like'
+        ],
+        cons: [
+          'Only possible with the checkbox. You cannot remove it is much more difficult to apply background to the item when selected'
+        ]
+      },
+      primeNG: {
+        pros: [
+          'Easy to set up',
+          'You can put the template you like',
+          'You can customize the list and even filter it'
+        ],
+      }
+    },
   ];
 
   getResults(): Results[] {
     return this.results;
   }
 
-  constructor() { }
+  constructor() {}
 }
