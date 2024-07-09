@@ -5,11 +5,26 @@
 <main class="flex justify-evenly gap-2">
     <section class="flex flex-col gap-2 justify-start">
         <h3 class="primeng text-center w-fit">PrimeNG</h3>
+        <div class="flex items-center gap-10">
+            <article>
+                <span class="mx-1 text-color">Items per page: </span>
+                <p-dropdown [options]="options" optionLabel="label" optionValue="value" [(ngModel)]="rows" (ngModelChange)="first = 0"/>
+            </article>
+            <p-paginator [first]="first" [rows]="rows" [totalRecords]="120" (onPageChange)="onPageChange($event)" [showCurrentPageReport]="true"
+                currentPageReportTemplate="{first} - {last} of {totalRecords}" [showPageLinks]="false" [showFirstLastIcon]="true" >
+            </p-paginator>
+        </div>
     </section>
 
     <hr class="border-blue-400">
 
     <section class="flex flex-col gap-2 justify-start">
         <h3 class="angular-material text-center w-fit">Angular Material</h3>
+        <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              showFirstLastButtons
+        >
+        </mat-paginator>
     </section>
 </main>

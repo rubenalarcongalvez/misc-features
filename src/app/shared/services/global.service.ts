@@ -348,7 +348,7 @@ export class GlobalService {
     {
       feature: 'List box',
       winner: EnumLibraries['PrimeNG'],
-      link: 'list-box',
+      link: 'listbox',
       angularMaterial: {
         pros: [
           'Easy to set up',
@@ -363,6 +363,22 @@ export class GlobalService {
           'Easy to set up',
           'You can put the template you like',
           'You can customize the list and even filter it'
+        ],
+      }
+    },
+    {
+      feature: 'Paginator',
+      winner: EnumLibraries['Angular Material'],
+      link: 'paginator',
+      angularMaterial: {
+        pros: [
+          'Easy to set up',
+          'Complete and all in the same component'
+        ],
+      },
+      primeNG: {
+        pros: [
+          'More options to customize and directives'
         ],
       }
     },
