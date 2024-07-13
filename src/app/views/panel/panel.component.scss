@@ -1,0 +1,17 @@
+:host ::ng-deep {
+    .p-accordion-header-link {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        font-weight: bold;
+    }
+
+    .p-accordion-content {
+        padding: 1rem;
+        text-align: justify;
+    }
+
+    .p-button-outlined {
+        background-color: rgb(80, 80, 200) !important;
+    }
+}

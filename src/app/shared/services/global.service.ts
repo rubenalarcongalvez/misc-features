@@ -382,6 +382,26 @@ export class GlobalService {
         ],
       }
     },
+    {
+      feature: 'Panel (accordion)',
+      winner: EnumLibraries['Tie'],
+      link: 'panel',
+      angularMaterial: {
+        pros: [
+          'Easy to set up',
+          'Very smooth animation'
+        ],
+      },
+      primeNG: {
+        pros: [
+          'Easy to customize style',
+          "Can choose to open/close tabs with buttons outside or with a method"
+        ],
+        cons: [
+          'When clicking on the icon to toggle, it does not open, you have to click outside it',
+        ]
+      }
+    },
   ];
 
   getResults(): Results[] {

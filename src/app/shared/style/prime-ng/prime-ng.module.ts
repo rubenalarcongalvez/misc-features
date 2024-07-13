@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { AccordionModule } from 'primeng/accordion';
 import { ButtonModule } from 'primeng/button';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { SliderModule } from 'primeng/slider';
@@ -35,6 +36,7 @@ import { SelectButtonModule } from 'primeng/selectbutton';
 @NgModule({
   declarations: [],
   imports: [
+    AccordionModule,
     ButtonModule,
     AutoCompleteModule,
     SliderModule,
@@ -69,6 +71,7 @@ import { SelectButtonModule } from 'primeng/selectbutton';
     RippleModule,
   ],
   exports: [
+    AccordionModule,
     ButtonModule,
     AutoCompleteModule,
     SliderModule,
