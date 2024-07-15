@@ -402,6 +402,59 @@ export class GlobalService {
         ]
       }
     },
+    {
+      feature: 'Progress bar (and spinner)',
+      winner: EnumLibraries['Angular Material'],
+      link: 'progress-bar',
+      angularMaterial: {
+        pros: [
+          'Easy to set up',
+          'You can customize style',
+          'Spinner is customizable and you can set value to it',
+          'Very stable'
+        ],
+      },
+      primeNG: {
+        pros: [
+          'You can set a complete template',
+        ],
+        cons: [
+          'Unstable if you reset CSS',
+          'Spinner is infinite and goes with time, not with value'
+        ]
+      }
+    },
+    {
+      feature: 'Slider',
+      winner: EnumLibraries['Tie'],
+      link: 'slider',
+      primeNG: {
+        pros: [
+          'More customization',
+        ],
+      },
+    },
+    {
+      feature: 'Tab View',
+      winner: EnumLibraries['Angular Material'],
+      link: 'tab-view',
+      angularMaterial: {
+        pros: [
+          'Animations to change tabs',
+          'You can play with tab index and changes',
+          'More useful directives',
+        ],
+      },
+      primeNG: {
+        pros: [
+          'Closable icon',
+          'Easy to use and customizable style',
+        ],
+        cons: [
+          'No animation on content to change tabs',
+        ]
+      },
+    },
   ];
 
   getResults(): Results[] {

@@ -3,11 +3,12 @@ import { Component } from '@angular/core';
 import { GlobalService, EnumLibraries, Results } from '../../shared/services/global.service';
 import { MaterialModule } from '../../shared/style/material/material.module';
 import { PrimeNgModule } from '../../shared/style/prime-ng/prime-ng.module';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MaterialModule, CommonModule, PrimeNgModule],
+  imports: [MaterialModule, CommonModule, PrimeNgModule, RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

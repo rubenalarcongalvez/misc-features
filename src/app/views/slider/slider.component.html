@@ -5,11 +5,20 @@
 <main class="flex justify-evenly gap-2">
     <section class="flex flex-col gap-2 justify-start">
         <h3 class="primeng text-center w-fit">PrimeNG</h3>
+        <div class="card flex justify-center">
+            <div>
+                <input type="number" pInputText [(ngModel)]="value" class="w-full mb-3"/>
+                <p-slider [(ngModel)]="value" class="w-full" />
+            </div>
+        </div>
     </section>
 
     <hr class="border-blue-400">
 
     <section class="flex flex-col gap-2 justify-start">
         <h3 class="angular-material text-center w-fit">Angular Material</h3>
+        <mat-slider min="0" max="100000" step="1000" showTickMarks discrete [displayWith]="formatLabel">
+           <input matSliderThumb>
+        </mat-slider>          
     </section>
 </main>

@@ -1,15 +1,61 @@
-<h1 class="text-center w-full text-blue-600">Tab Menu</h1>
+<h1 class="text-center w-full text-blue-600">Tab View</h1>
 
 <br>
 
-<main class="flex justify-evenly gap-2">
-    <section class="flex flex-col gap-2 justify-start">
+<main class="flex flex-col justify-evenly gap-2">
+    <section class="flex flex-col gap-2 justify-start w-full">
         <h3 class="primeng text-center w-fit">PrimeNG</h3>
+        <p-tabView [(activeIndex)]="activeIndex" class="w-full" scrollable="true">
+            <p-tabPanel header="Header I">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed ipsam ex, cumque vel obcaecati assumenda veniam officia sapiente quae nam ea sint illo, culpa doloribus blanditiis voluptates? Quae, adipisci ea!
+                </p>
+            </p-tabPanel>
+            <p-tabPanel header="Header II" closable="true">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic mollitia amet, et neque nobis totam dicta sequi magni eveniet id tenetur at, obcaecati pariatur odit repellendus aut laudantium. Sunt, quas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi doloremque dicta dolorem et dolor consequatur, harum, reiciendis nisi, similique impedit aliquid magnam quam? Modi eveniet alias, officia repellat quae earum.
+                </p>
+            </p-tabPanel>
+            <p-tabPanel header="Header III">
+                <p>
+                    At vero eos et accusamus et iusto odio dignissimos...
+                </p>
+            </p-tabPanel>
+        </p-tabView>
     </section>
 
     <hr class="border-blue-400">
 
-    <section class="flex flex-col gap-2 justify-start">
+    <section class="flex flex-col gap-2 justify-start w-full">
         <h3 class="angular-material text-center w-fit">Angular Material</h3>
+        <mat-form-field >
+            <mat-label>Selected tab index</mat-label>
+            <input matInput type="number" [formControl]="selected">
+          </mat-form-field>
+          
+          <div>
+            <button mat-raised-button
+                    class="example-add-tab-button"
+                    (click)="addTab(selectAfterAdding.checked)">
+              Add new tab
+            </button>
+            <mat-checkbox #selectAfterAdding> Select tab after adding </mat-checkbox>
+          </div>
+          
+          <mat-tab-group class="w-full" [selectedIndex]="selected.value"
+                         (selectedIndexChange)="selected.setValue($event)">
+            @for (tab of tabs; track tab; let index = $index) {
+              <mat-tab [label]="tab">
+                Contents for {{tab}} tab
+          
+                <button mat-raised-button
+                        class="example-delete-tab-button"
+                        [disabled]="tabs.length === 1"
+                        (click)="removeTab(index)">
+                  Delete Tab
+                </button>
+              </mat-tab>
+            }
+          </mat-tab-group>          
     </section>
 </main>

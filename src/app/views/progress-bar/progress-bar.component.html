@@ -5,11 +5,26 @@
 <main class="flex justify-evenly gap-2">
     <section class="flex flex-col gap-2 justify-start">
         <h3 class="primeng text-center w-fit">PrimeNG</h3>
+        <article class="flex flex-col gap-5 w-full items-center justify-center p-2">
+            <div class="card w-full">
+                <p>Cannot show the percentage easily although it is supposed to be allowed</p>
+                <p-progressBar [value]="value" class="h-[50px]">
+                    <ng-template pTemplate="content" let-value> 
+                        <span>{{value}}/100</span>        
+                    </ng-template>
+                </p-progressBar>
+           </div>
+            <p-progressSpinner></p-progressSpinner>
+        </article>
     </section>
 
     <hr class="border-blue-400">
 
-    <section class="flex flex-col gap-2 justify-start">
+    <section class="flex flex-col gap-2 justify-start w-[20%]">
         <h3 class="angular-material text-center w-fit">Angular Material</h3>
+        <article class="flex flex-col gap-5 w-full items-center justify-center p-2">
+            <mat-progress-bar mode="determinate" [value]="value"></mat-progress-bar>
+            <mat-progress-spinner mode="determinate" [value]="value" color="primary"></mat-progress-spinner>
+        </article>
     </section>
 </main>

@@ -1,0 +1,10 @@
+:host ::ng-deep {
+    .p-slider {
+        background-color: red;;
+    }
+
+    .p-slider-handle {
+        margin-top: -10px;
+        margin-left: -10px;
+    }
+}

@@ -1,0 +1,10 @@
+:host ::ng-deep {
+    .p-splitter-gutter {
+        background-color: red;
+        padding: 5px;
+
+        .p-splitter-gutter-handle {
+            background-color: blue;
+        }
+    }
+}

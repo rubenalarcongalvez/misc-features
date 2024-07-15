@@ -6,5 +6,9 @@
     <section class="flex flex-col gap-2 justify-start">
         <h3 class="primeng text-center w-fit">PrimeNG</h3>
         <h4 class="text-center">This is only in PrimeNG, so it will count in the "variety" section</h4>
+        <p-rating [(ngModel)]="value"></p-rating>
+        <h4 class="text-center">You can also import other components from <code>npm</code> if you want to specify more or you feel you miss something.</h4>
+        <p>But it might be more unstable.</p>
+        <ngx-stars [size]="2" [maxStars]="5" (ratingOutput)="onRatingSet($event)" [wholeStars]="true" color="gold"></ngx-stars>
     </section>
 </main>

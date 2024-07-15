@@ -11,9 +11,7 @@ import { ButtonGroupComponent } from './views/button-group/button-group.componen
 import { ListboxComponent } from './views/listbox/listbox.component';
 import { PaginatorComponent } from './views/paginator/paginator.component';
 import { PanelComponent } from './views/panel/panel.component';
-import { PicklistComponent } from './views/picklist/picklist.component';
 import { ProgressBarComponent } from './views/progress-bar/progress-bar.component';
-import { ProgressSpinnerComponent } from './views/progress-spinner/progress-spinner.component';
 import { RatingComponent } from './views/rating/rating.component';
 import { SliderComponent } from './views/slider/slider.component';
 import { SplitterComponent } from './views/splitter/splitter.component';
@@ -39,13 +37,11 @@ export const routes: Routes = [
     {path: 'listbox', component: ListboxComponent},
     {path: 'paginator', component: PaginatorComponent},
     {path: 'panel', component: PanelComponent},
-    {path: 'picklist', component: PicklistComponent},
     {path: 'progress-bar', component: ProgressBarComponent},
-    {path: 'progress-spinner', component: ProgressSpinnerComponent},
     {path: 'rating', component: RatingComponent},
     {path: 'slider', component: SliderComponent},
     {path: 'splitter', component: SplitterComponent},
-    {path: 'tab-menu', component: TabMenuComponent},
+    {path: 'tab-view', component: TabMenuComponent},
     {path: 'table', component: TableComponent},
     {path: 'toast', component: ToastComponent},
     {path: 'tooltip', component: TooltipComponent},

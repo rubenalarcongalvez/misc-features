@@ -3,8 +3,31 @@
 <br>
 
 <main class="flex justify-evenly gap-2">
-    <section class="flex flex-col gap-2 justify-start">
+    <section class="flex flex-col gap-2 justify-start w-full">
         <h3 class="primeng text-center w-fit">PrimeNG</h3>
         <h4 class="text-center">This is only in PrimeNG, so it will count in the "variety" section</h4>
+        <div class="card w-full">
+            <p-splitter [style]="{ height: '300px' }" styleClass="mb-5">
+                <ng-template pTemplate>
+                    <div class="col flex items-center justify-center w-full">
+                        Panel 1
+                    </div>
+                </ng-template>
+                <ng-template pTemplate>
+                    <p-splitter layout="vertical" [style]="{ height: '300px' }" styleClass="mb-5">
+                        <ng-template pTemplate>
+                            <div class="col flex items-center justify-center w-full">
+                                Panel 2.1
+                            </div>
+                        </ng-template>
+                        <ng-template pTemplate>
+                            <div class="col flex items-center justify-center w-full">
+                                Panel 2.2
+                            </div>
+                        </ng-template>
+                    </p-splitter>
+                </ng-template>
+            </p-splitter>
+        </div>
     </section>
 </main>

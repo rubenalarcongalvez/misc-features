@@ -18,7 +18,7 @@ import { DragDropModule } from 'primeng/dragdrop';
 import { TableModule } from 'primeng/table';
 import { ChipsModule } from 'primeng/chips';
 import { PanelModule } from 'primeng/panel';
-import { TabMenuModule } from 'primeng/tabmenu';
+import { TabViewModule } from 'primeng/tabview';
 import { BadgeModule } from 'primeng/badge';
 import { CheckboxModule } from 'primeng/checkbox';
 
@@ -56,7 +56,7 @@ import { SelectButtonModule } from 'primeng/selectbutton';
     TableModule,
     ChipsModule,
     PanelModule,
-    TabMenuModule,
+    TabViewModule,
     BadgeModule,
     CheckboxModule,
 
@@ -91,7 +91,7 @@ import { SelectButtonModule } from 'primeng/selectbutton';
     TableModule,
     ChipsModule,
     PanelModule,
-    TabMenuModule,
+    TabViewModule,
     BadgeModule,
     CheckboxModule,
 

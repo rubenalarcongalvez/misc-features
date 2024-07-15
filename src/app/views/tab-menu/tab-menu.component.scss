@@ -1,0 +1,19 @@
+:host ::ng-deep {
+    .p-tabview-nav-link {
+        padding: 5px;
+    }
+    .p-icon-wrapper {
+        margin-inline: 5px;
+        width: 10px;
+        
+        :hover {
+            color: red;
+        }
+    }
+}
+
+.example-input-label,
+.example-add-tab-button,
+.example-delete-tab-button {
+  margin: 8px;
+}

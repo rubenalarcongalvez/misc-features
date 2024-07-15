@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { PrimeNgModule } from '../../shared/style/prime-ng/prime-ng.module';
 
 @Component({
   selector: 'app-splitter',
   standalone: true,
-  imports: [],
+  imports: [PrimeNgModule],
   templateUrl: './splitter.component.html',
   styleUrl: './splitter.component.scss'
 })
