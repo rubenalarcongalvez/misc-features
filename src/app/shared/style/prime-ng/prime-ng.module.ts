@@ -32,6 +32,8 @@ import { FloatLabelModule } from 'primeng/floatlabel';
 import { TagModule } from 'primeng/tag';
 import { RippleModule } from 'primeng/ripple';
 import { SelectButtonModule } from 'primeng/selectbutton';
+import { AvatarModule } from 'primeng/avatar';
+import { ContextMenuModule } from 'primeng/contextmenu';
 
 @NgModule({
   declarations: [],
@@ -69,6 +71,8 @@ import { SelectButtonModule } from 'primeng/selectbutton';
     FloatLabelModule,
     TagModule,
     RippleModule,
+    AvatarModule,
+    ContextMenuModule,
   ],
   exports: [
     AccordionModule,
@@ -104,6 +108,8 @@ import { SelectButtonModule } from 'primeng/selectbutton';
     FloatLabelModule,
     TagModule,
     RippleModule,
+    AvatarModule,
+    ContextMenuModule,
   ]
 })
 export class PrimeNgModule { }

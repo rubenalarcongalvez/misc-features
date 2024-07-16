@@ -55,7 +55,7 @@ export class GlobalService {
           'Most components are soft and neat components'
         ],
         cons: [
-          'There are bugs and hard to customize sometimes'
+          'There are some bugs and it is not well tested with TypeScript'
         ]
       },
       angularMaterial: {
@@ -149,7 +149,7 @@ export class GlobalService {
           'The shape is very good looking'
         ],
         cons: [
-          'The behabior and design is not that good'
+          'The behabior and design are not that good when you have reset CSS'
         ]
       },
       angularMaterial: {
@@ -192,7 +192,6 @@ export class GlobalService {
           'Easy to set up'
         ],
         cons: [
-          'Poor guides',
           'Cannot set a fully customizable template easily as putting an initial <code>option</code> before all of the rests, as a <code>None</code> option. It is not well centered if we use margin 0 by default, so we should edit all individually',
           'The directive <code>completeMethod</code> does not work if the input is filled and we delete it all, so it won\'t show the list in that case, so we should make it like in Angular Material',
           'Not possible to have <code>completeMethod</code> to execute when the input is empty, so the panel is not shown when input is written and then removed. <span class="text-red-600">This is a must have condition in my opinion, at least as a directive</span>'
@@ -212,7 +211,7 @@ export class GlobalService {
     },
     {
       feature: 'Badge',
-      winner: EnumLibraries['Angular Material'],
+      winner: EnumLibraries['Tie'],
       link: 'badge',
       angularMaterial: {
         pros: [
@@ -229,7 +228,6 @@ export class GlobalService {
           'Content of the badge is easier to modify and put style',
         ],
         cons: [
-          'The badge has no overlapping option to avoid be put on a text (but can be solved with some margin)',
           'When the content is empty, it is not hidden, so we should put style on it instead'
         ]
       }
@@ -436,7 +434,7 @@ export class GlobalService {
     },
     {
       feature: 'Tab View',
-      winner: EnumLibraries['Angular Material'],
+      winner: EnumLibraries['Tie'],
       link: 'tab-view',
       angularMaterial: {
         pros: [
@@ -452,6 +450,89 @@ export class GlobalService {
         ],
         cons: [
           'No animation on content to change tabs',
+        ]
+      },
+    },
+    {
+      feature: 'Table',
+      winner: EnumLibraries['PrimeNG'],
+      link: 'table',
+      angularMaterial: {
+        pros: [
+          'Animations and sorting are really soft',
+          'You can unset sorting by clicking 3 times on a sort'
+        ],
+        cons: [
+          'Configuration and customization might be really tedious',
+        ]
+      },
+      primeNG: {
+        pros: [
+          'Lots of directives and configuration you can implement',
+          'Easy to use, set up and customizable style',
+          'Custom caption, header and body',
+          'You can set multiple ordering',
+        ],
+        cons: [
+          'No animation when sorting',
+          'If you use reset CSS, content style might be uneven',
+        ]
+      },
+    },
+    {
+      feature: 'Toast (SnackBar)',
+      winner: EnumLibraries['PrimeNG'],
+      link: 'toast',
+      angularMaterial: {
+        pros: [
+          'Can be used with lots of views'
+        ],
+        cons: [
+          'Difficult to customize',
+          'No close button option to set easily, just confirm',
+          'You have to sync too much components to make it work',
+          'Does not cover a center notification',
+        ]
+      },
+      primeNG: {
+        pros: [
+          'Lots of directives and configuration you can implement',
+          'In-depth template configuration and in the same component',
+          'Animations are better by default',
+        ],
+      },
+    },
+    {
+      feature: 'Tooltip',
+      winner: EnumLibraries['PrimeNG'],
+      link: 'tooltip',
+      primeNG: {
+        pros: [
+          'You can set the template you like',
+        ],
+      },
+    },
+    {
+      feature: 'Tree',
+      winner: EnumLibraries['PrimeNG'],
+      link: 'tree',
+      primeNG: {
+        pros: [
+          'You can set the template you like',
+          'Built-in templates to checkboxes, drag and drop and lots of directives',
+          'Virtualscroll and lazy loading',
+          'Fully customizable',
+        ],
+      },
+      angularMaterial: {
+        pros: [
+          'You can set the template you like',
+          'Virtualscroll and lazy loading',
+        ],
+        cons: [
+          'Customize the style might be difficult and uneven elements',
+          'Very few options to customize the component actions',
+          'If you want to put checkboxes or something else, it will take you a bit longer',
         ]
       },
     },

@@ -2,14 +2,66 @@
 
 <br>
 
-<main class="flex justify-evenly gap-2">
+<main class="flex flex-col justify-evenly gap-4">
     <section class="flex flex-col gap-2 justify-start">
         <h3 class="primeng text-center w-fit">PrimeNG</h3>
+        <div class="card flex flex-col items-center justify-center w-full">
+            <div class="mb-3">
+                <p-button 
+                    icon="pi pi-plus" 
+                    label="Expand all" 
+                    (onClick)="expandAll()" 
+                    class="mr-2 button-gap" />
+                <p-button 
+                    icon="pi pi-minus" 
+                    label="Collapse all" 
+                    class="button-gap"
+                    (onClick)="collapseAll()" />
+            </div>
+            <p-tree 
+                [value]="files" 
+                selectionMode="checkbox" 
+                class="w-full md:w-30rem" 
+                [(selection)]="selectedFiles" 
+                [contextMenu]="cm"
+                [draggableNodes]="true" 
+                [droppableNodes]="true" 
+                draggableScope="self" 
+                droppableScope="self"
+            />
+            <p-contextMenu #cm [model]="items" />
+        </div>
     </section>
 
     <hr class="border-blue-400">
 
     <section class="flex flex-col gap-2 justify-start">
         <h3 class="angular-material text-center w-fit">Angular Material</h3>
+        <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="example-tree w-full">
+            <!-- This is the tree node template for leaf nodes -->
+            <!-- There is inline padding applied to this node using styles.
+              This padding value depends on the mat-icon-button width. -->
+            <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
+                {{node.name}}
+            </mat-tree-node>
+            <!-- This is the tree node template for expandable nodes -->
+            <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild">
+                <div class="mat-tree-node">
+                  <button mat-icon-button matTreeNodeToggle
+                          [attr.aria-label]="'Toggle ' + node.name">
+                    <mat-icon class="mat-icon-rtl-mirror">
+                      {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+                    </mat-icon>
+                  </button>
+                  {{node.name}}
+                </div>
+                <!-- There is inline padding applied to this div using styles.
+                    This padding value depends on the mat-icon-button width.  -->
+                <div [class.example-tree-invisible]="!treeControl.isExpanded(node)"
+                    role="group">
+                  <ng-container matTreeNodeOutlet></ng-container>
+              </div>
+            </mat-nested-tree-node>
+          </mat-tree>          
     </section>
 </main>

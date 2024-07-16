@@ -5,11 +5,55 @@
 <main class="flex justify-evenly gap-2">
     <section class="flex flex-col gap-2 justify-start">
         <h3 class="primeng text-center w-fit">PrimeNG</h3>
+        <article class="flex gap-2">
+            <div class="card flex justify-center">
+                <p-button 
+                    [pTooltip]="tooltipContent"
+                    tooltipPosition="bottom" 
+                    label="Hover me" />
+                <ng-template #tooltipContent>
+                    <div class="flex items-center p-1 m-1">
+                        <span>Info about the action</span>
+                    </div>
+                </ng-template>
+            </div>
+            <div class="card flex justify-center">
+                <p-button 
+                    [pTooltip]="tooltipContent2"
+                    tooltipPosition="bottom" 
+                    label="Hover me" />
+                <ng-template #tooltipContent2>
+                    <div class="flex items-center p-1 m-1">
+                        <div class="flex flex-col items-start p-2" style="flex: 1">
+                            <div class="flex items-center gap-2">
+                                <p-avatar 
+                                    image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" 
+                                    shape="circle" />
+                                <span class="font-bold text-900">
+                                    Amy Elsner
+                                </span>
+                            </div>
+                            <div class="font-medium text-lg mt-3 text-900">
+                                Can you send me the report?
+                            </div>
+                            <div class="my-3 text-900">
+                                You can set your custom template to work as a tooltip as well.
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </div>
+        </article>
     </section>
 
     <hr class="border-blue-400">
 
     <section class="flex flex-col gap-2 justify-start">
         <h3 class="angular-material text-center w-fit">Angular Material</h3>
+        <button mat-raised-button
+                matTooltip="Info about the action"
+                aria-label="Button that displays a tooltip when focused or hovered over">
+            Hover me
+        </button>
     </section>
 </main>

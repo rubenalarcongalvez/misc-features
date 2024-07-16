@@ -1,0 +1,21 @@
+:host ::ng-deep {
+    .p-datatable-tbody {
+        .p-button {
+            scale: .6;
+        }
+    }
+    .p-rating {
+        width: 10px;
+        display: flex;
+        gap: 5px;
+    }
+    .p-tag-value {
+        padding: 5px;
+    }
+    th {
+        padding: 1rem 5px;
+    }
+    td {
+        padding: 5px;
+    }
+}

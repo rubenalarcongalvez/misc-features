@@ -10,7 +10,7 @@
         <mat-icon class="mat-18" iconPositionEnd>print</mat-icon>
     </button> -->
 </div>
-<p class="mb-1 remove-to-print">Best is to use Tailwind with them or in case of PrimeNG, PrimeFlex if you like.</p>
+<p class="mb-1 remove-to-print">Best is to use Tailwind with them or in case of using PrimeNG, PrimeFlex if you like.</p>
 <hr>
 <div class="mt-1 flex flex-col gap-1">
     <h4>PrimeNG wins - <span class="text-sm text-white bg-green-700 font-normal rounded-full px-1">{{totalPoints(primeNGWins())}}</span> : 
@@ -37,6 +37,10 @@
             <span [matBadge]="item.relevance" matBadgeColor="primary" [matBadgeOverlap]="false" matBadgeSize="small" class="font-normal cursor-pointer hover:text-blue-600" (click)="selectIndex(item.feature)" [ngClass]="{'me-3': item.relevance}">{{item.feature}}</span>
         }
     </h4>
+    <hr>
+    <h4>Conclusion: <span class="font-normal">You should use <code>Angular Material</code> if you want a predefined and soft style that matches Google's appearance, but you are not going to modify the components exhaustively. On the other hand, use <code>PrimeNG</code> if you want customization and to have plenty of components for every need. It might be a bit unstable in some components, but you can solve it.</span>
+    </h4>
+    <p>Both are unstable in some parts and you may miss some things that the other library has. So you ought to choose the library you feel have more components that fits your project and think about scalability and customization. The third option is aplying both libraries but using just the components you will use, not importing all modules.</p>
 </div>
 
 <mat-tab-group class="remove-to-print" animationDuration="0" [selectedIndex]="selectedIndex" (selectedTabChange)="changeIndexTab($event)">

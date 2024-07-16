@@ -5,11 +5,42 @@
 <main class="flex justify-evenly gap-2">
     <section class="flex flex-col gap-2 justify-start">
         <h3 class="primeng text-center w-fit">PrimeNG</h3>
+        <div class="card flex justify-center">
+            <p-toast 
+                position="center" 
+                key="confirm" 
+                (onClose)="onReject()" 
+                [baseZIndex]="5000">
+                    <ng-template let-message pTemplate="message">
+                        <div class="flex flex-col items-start p-2" style="flex: 1">
+                            <div class="flex items-center gap-2">
+                                <p-avatar 
+                                    image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" 
+                                    shape="circle" />
+                                <span class="font-bold text-900">
+                                    Amy Elsner
+                                </span>
+                            </div>
+                            <div class="font-medium text-lg mt-3 text-900">
+                                {{ message.summary }}
+                            </div>
+                            <div class="my-3 text-900">
+                                {{ message.detail }}
+                            </div>
+                            <p-button class="self-end" size="small" label="Reply" (onClick)="onConfirm()" />
+                        </div>
+                    </ng-template>
+            </p-toast>
+            <p-button pRipple (onClick)="showConfirm()" label="View" />
+        </div>
     </section>
 
     <hr class="border-blue-400">
 
     <section class="flex flex-col gap-2 justify-start">
         <h3 class="angular-material text-center w-fit">Angular Material</h3>
+        <button mat-stroked-button (click)="openSnackBar()" aria-label="Show an example snack-bar">
+        View
+        </button>
     </section>
 </main>

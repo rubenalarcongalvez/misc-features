@@ -1,0 +1,19 @@
+<div class="flex flex-col items-start p-2" style="flex: 1">
+    <div class="flex items-center gap-2">
+        <p-avatar 
+            image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" 
+            shape="circle" />
+        <span class="font-bold text-900">
+            Amy Elsner
+        </span>
+    </div>
+    <div class="font-medium text-lg mt-3 text-900">
+        Can you send me the report?
+    </div>
+    <div class="my-3 text-900">
+        Please, it is really important as our enterprise would be collapsed if you do not do it in a maximum of 2 hours.
+    </div>
+    <span matSnackBarActions class="self-end">
+        <button mat-button matSnackBarAction (click)="snackBarRef.dismissWithAction()">Reply</button>
+    </span>
+</div>
